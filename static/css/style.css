@@ -1003,6 +1003,22 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#Contact_Form {
+    font-weight: semi-bold;
+}
+
+#submit {
+    margin-top: 1rem;
+    --bs-btn-bg: #18d26e;
+    --bs-btn-border-color: #18d26e;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #15bb62;
+    --bs-btn-hover-border-color: #15bb62;
+    --bs-btn-active-bg: #15bb62;
+    --bs-btn-active-border-color: #15bb62;
+}
+
+
 .contact .info-box {
   color: #444444;
   padding: 20px;
