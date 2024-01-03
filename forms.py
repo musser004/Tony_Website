@@ -12,4 +12,4 @@ class ContactForm(FlaskForm):
     email = StringField("Email Address", validators=[DataRequired(), Email()])
     phone = StringField("Phone Number", validators=[DataRequired()])
     message = CKEditorField("Comment", validators=[DataRequired()])
-    submit = SubmitField("Submit")
+    submit = SubmitField("Send Message")
