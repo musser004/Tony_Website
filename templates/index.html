@@ -14,7 +14,7 @@
 
   <!-- Favicons -->
   <link href="static/img/icons8-trombone-32.png" rel="icon">
-  <link href="static/img/icons8-trombone-32.png" rel="apple-touch-icon">
+  <link href="static/img/trombone-mobile.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -137,80 +137,83 @@ Kilpatrick, Carl Mazzio, Scott Parkinson, Pete Sullivan, Peter Ellefson, and Joe
       </div>
 
       <div class="row">
+
+          {% for event in events %}
         <div class="col-lg-6">
-<!--          <h3 class="resume-title">UNDER CONSTRUCTION</h3>-->
-          <h3 class="resume-title">Worthington Chamber Orchestra Concert</h3>
+          <h3 class="resume-title">{{event['eventName']}}</h3>
           <div class="resume-item pb-0">
-            <h4>Sunday, February 4th, 5pm</h4>
-            <p><em>Location: Worthington United Methodist Church</em></p>
+            <h4>{{event['dateAndTime']}}</h4>
+            <p><em>{{event['description']}}</em></p>
           </div>
 
         </div>
-
-        <div class="col-lg-6">
-          <h3 class="resume-title">Buckeye Brass Trombone Day</h3>
-          <div class="resume-item">
-            <h4>Saturday, February 24, 9am-5pm</h4>
-            <p><em>Location: Buckeye Brass and Winds</em></p>
-          </div>
-        </div>
-
-                  <div class="col-lg-6">
-          <h3 class="resume-title">Springfield Symphony Orchestra</h3>
-          <div class="resume-item">
-            <h4>Saturday, March 2, 7:30pm</h4>
-            <p><em>Location: Clark State Performing Arts Center</em></p>
-          </div>
-        </div>
-
-                            <div class="col-lg-6">
-          <h3 class="resume-title">Ohio Trombone Quartet</h3>
-          <div class="resume-item">
-            <h4>Thursday, March 7, 7:30pm</h4>
-            <p><em>Location: Cameron University, Lawton, OK. Performing Jeff Cortazzo's "Four Horsemen of the Apocalypse"</em></p>
-          </div>
-        </div>
-
-                            <div class="col-lg-6">
-          <h3 class="resume-title">Springfield Symphony Orchestra</h3>
-          <div class="resume-item">
-            <h4>Saturday, April 13, 7:30pm</h4>
-            <p><em>Location: Clark State Performing Arts Center</em></p>
-          </div>
-        </div>
-
-                            <div class="col-lg-6">
-          <h3 class="resume-title">Westerville Symphony Orchestra</h3>
-          <div class="resume-item">
-            <h4>Sunday, April 21, 5pm</h4>
-            <p><em>Location: Cowan Hall, Otterbein University</em></p>
-          </div>
-        </div>
-
-                            <div class="col-lg-6">
-          <h3 class="resume-title">Newark-Granville Symphony Orchestra</h3>
-          <div class="resume-item">
-            <h4>Saturday, May 11, 7:30pm</h4>
-            <p><em>Location: Midland Theater</em></p>
-          </div>
-        </div>
-
-                            <div class="col-lg-6">
-          <h3 class="resume-title">Springfield Symphony Orchestra</h3>
-          <div class="resume-item">
-            <h4>Saturday, May 18, 7:30pm</h4>
-            <p><em>Location: Clark State Performing Arts Center</em></p>
-          </div>
-        </div>
+          {% endfor %}
 
 
-                                      <div class="col-lg-6">
-          <h3 class="resume-title">International Trombone Festival</h3>
-          <div class="resume-item">
-            <h4>May 29-June 1</h4>
-            <p><em>Location: Texas Christian University. Artist Recital Performer. Performing "15 Years (On the Erie Canal)" by Jennifer Merkowitz</em></p>
-          </div>
-        </div>
+<!--        <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Buckeye Brass Trombone Day</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Saturday, February 24, 9am-5pm</h4>-->
+<!--            <p><em>Location: Buckeye Brass and Winds</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                  <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Springfield Symphony Orchestra</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Saturday, March 2, 7:30pm</h4>-->
+<!--            <p><em>Location: Clark State Performing Arts Center</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Ohio Trombone Quartet</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Thursday, March 7, 7:30pm</h4>-->
+<!--            <p><em>Location: Cameron University, Lawton, OK. Performing Jeff Cortazzo's "Four Horsemen of the Apocalypse"</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Springfield Symphony Orchestra</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Saturday, April 13, 7:30pm</h4>-->
+<!--            <p><em>Location: Clark State Performing Arts Center</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Westerville Symphony Orchestra</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Sunday, April 21, 5pm</h4>-->
+<!--            <p><em>Location: Cowan Hall, Otterbein University</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Newark-Granville Symphony Orchestra</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Saturday, May 11, 7:30pm</h4>-->
+<!--            <p><em>Location: Midland Theater</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">Springfield Symphony Orchestra</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>Saturday, May 18, 7:30pm</h4>-->
+<!--            <p><em>Location: Clark State Performing Arts Center</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+<!--                                      <div class="col-lg-6">-->
+<!--          <h3 class="resume-title">International Trombone Festival</h3>-->
+<!--          <div class="resume-item">-->
+<!--            <h4>May 29-June 1</h4>-->
+<!--            <p><em>Location: Texas Christian University. Artist Recital Performer. Performing "15 Years (On the Erie Canal)" by Jennifer Merkowitz</em></p>-->
+<!--          </div>-->
+<!--        </div>-->
 
 
       </div>
