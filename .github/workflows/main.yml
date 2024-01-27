@@ -5,6 +5,24 @@ on:
     - cron:  '0,8,16,24,32,40,48,56 * * * *'
  
 jobs:
+  empty_commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - run: git config user.email "musser004@gmail.com"
+    - run: git config user.name "James Musser"
+
+    - name: Create Empty Commit
+      run: git commit --allow-empty -m "Empty commit"
+
+    - name: Push Empty Commit
+      run: git push origin main  # Change 'main' to your branch name
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 #   debug_job:
 #    runs-on: ubuntu-latest
 #    steps:
@@ -16,12 +34,12 @@ jobs:
 #    env:
 #        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  job_1:
-      runs-on: ubuntu-latest
-      steps:
-          - run: git config user.email "musser004@gmail.com"
-          - run: git config user.name "James Musser"
-          - run: git commit --allow-empty -m "Empty-Commit"
-          - run: git push origin main
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # job_1:
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #         - run: git config user.email "musser004@gmail.com"
+  #         - run: git config user.name "James Musser"
+  #         - run: git commit --allow-empty -m "Empty-Commit"
+  #         - run: git push origin main
+  #     env:
+  #       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
