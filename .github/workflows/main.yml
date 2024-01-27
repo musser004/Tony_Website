@@ -5,20 +5,22 @@ on:
     - cron:  '0,8,16,24,32,40,48,56 * * * *'
  
 jobs:
-  debug_job:
-   runs-on: ubuntu-latest
-   steps:
-       - run: |
-            git status
-            git branch
-            git remote -v
-            git log -n 5
-   env:
-       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#   debug_job:
+#    runs-on: ubuntu-latest
+#    steps:
+#        - run: |
+#             git status
+#             git branch
+#             git remote -v
+#             git log -n 5
+#    env:
+#        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   job_1:
       runs-on: ubuntu-latest
       steps:
+          - run: git config user.email "musser004@gmail.com"
+          - run: git config user.name "James Musser"
           - run: git commit --allow-empty -m "Empty-Commit"
           - run: git push origin main
       env:
