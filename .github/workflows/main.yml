@@ -2,7 +2,7 @@ name: cron-schedule-updater
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 3 * * *'
+    - cron:  '0 8 * * *'
  
 jobs:
   empty_commit:
