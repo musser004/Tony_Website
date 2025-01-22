@@ -21,6 +21,6 @@ class EmailSender:
             connection.sendmail(
                 from_addr=self.email,
                 to_addrs=self.email,
-                msg=f"Subject: Portfolio contact form message!\n\nName: {name}\n\nPhone: {phone}\n\n"
+                msg=f"Subject: (tonyweikel.com) Portfolio contact form message!\n\nName: {name}\n\nPhone: {phone}\n\n"
                     f"Email: {contact_email}\n\n{message}"
             )
